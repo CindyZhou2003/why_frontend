@@ -23,31 +23,6 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
     disconnect: jest.fn(),
 })) as any;
 
-// 定义 API 响应类型
-interface LoginResponse {
-    token: string;
-    user_id: string;
-    message: string;
-    code?: number;
-}
-
-interface RegisterResponse {
-    code: number;
-    message: string;
-}
-
-interface LoginParams {
-    email: string;
-    password: string;
-    code?: number;
-}
-
-interface RegisterParams {
-    nickname: string;
-    email: string;
-    password: string;
-}
-
 // 模拟 userApi
 const mockLogin = jest.fn();
 const mockRegister = jest.fn();
